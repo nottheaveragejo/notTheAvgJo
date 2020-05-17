@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import androidChrome from './android-chrome-512x512.png';
 import { config } from '../../../data';
 
 import Information from './Information';
@@ -10,13 +10,7 @@ import Information from './Information';
 import './index.scss';
 
 const {
-  wordings = [],
-  githubUsername,
-  zhihuUsername,
-  email,
-  iconUrl,
   about,
-  facebook,
 } = config;
 
 const Icon = ({ href, icon }) => (
@@ -36,23 +30,16 @@ const Sidebar = ({ totalCount, latestPosts }) => (
   <header className="intro-header site-heading text-center col-xl-2 col-lg-3 col-xs-12 order-lg-1">
     <div className="about-me">
       <Link to={about} href={about} className="name">
-        <img className="avatar" src={iconUrl} alt="Calpa" />
-        <h4>Calpa</h4>
+        <img className="avatar" src={androidChrome} alt="Calpa" />
+        <h4>Lisa</h4>
       </Link>
-      <p className="mb-1">{wordings[0]}</p>
-      <p className="mb-3">{wordings[1]}</p>
+      <p className="mb-1">Writer</p>
+      <p className="mb-3">Software Engineer</p>
       <Icon
-        href={`https://www.zhihu.com/people/${zhihuUsername}`}
-        icon={['fab', 'zhihu']}
-      />
-      <Icon
-        href={`https://github.com/${githubUsername}`}
+        href="https://github.com/nottheaveragejo"
         icon={['fab', 'github']}
       />
-      <Icon href={`mailto:${email}`} icon={['far', 'envelope']} />
-      {facebook
-        && <Icon href={`https://www.facebook.com/${facebook}/`} icon={['fab', 'facebook']} />
-      }
+      <Icon href="mailto:lisaxjo@gmail.com" icon={['far', 'envelope']} />
       <Information totalCount={totalCount} posts={latestPosts} />
     </div>
   </header>

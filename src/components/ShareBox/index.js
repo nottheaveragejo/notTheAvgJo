@@ -11,15 +11,14 @@ const CommentButton = () => (
     className="share-button"
     style={{
       lineHeight: '1.7rem',
-      color: '#337ab7',
+      color: '#ffaaa5',
       paddingLeft: '0.15rem',
     }}
     href="#gitalk-container"
-    onClick={() =>
-      ReactGA.event({
-        category: 'User',
-        action: 'Goto Comment Box',
-      })
+    onClick={() => ReactGA.event({
+      category: 'User',
+      action: 'Goto Comment Box',
+    })
     }
   >
     <FontAwesomeIcon icon={['far', 'comment']} />
@@ -32,11 +31,10 @@ const ShareBox = ({ url, hasCommentBox }) => (
       href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
       title=""
       className="share-button"
-      onClick={() =>
-        ReactGA.event({
-          category: 'Share',
-          action: 'Facebook Share',
-        })
+      onClick={() => ReactGA.event({
+        category: 'Share',
+        action: 'Facebook Share',
+      })
       }
     >
       <FontAwesomeIcon icon={['fab', 'facebook-f']} />

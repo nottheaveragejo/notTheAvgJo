@@ -7,9 +7,9 @@
     "theme_color": "#384f7c",
     "google_site_verification": "riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io"
   },
-  "name": "calpa",
-  "about": "/2018/05/01/about-calpa-liu/",
-  "email": "calpaliu@gmail.com",
+  "name": "lisa",
+  "about": "/2019/11/30/about-lisa/",
+  "email": "lisaxjo@gmail.com",
   "stats": {
     "image": "https://i.imgur.com/VjBWiSt.png",
     "title": "過去三十日數據",
@@ -37,21 +37,17 @@
   "gaTrackId": "UA-84737574-3",
   "navbarList": [
     {
-      "href": "/guestbook/",
-      "title": "留言簿"
-    },
-    {
       "href": "/tags/",
       "title": "Tags"
     },
     {
-      "href": "/2018/05/01/about-calpa-liu/",
-      "title": "關於作者"
+      "href": "/2019/11/30/about-lisa/",
+      "title": "About"
     }
   ],
   "redirectors": [
     {
-      "toPath": "/2018/05/01/about-calpa-liu/",
+      "toPath": "/2019/11/30/about-lisa/",
       "fromPath": "/about/"
     }
   ],

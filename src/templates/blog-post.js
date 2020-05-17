@@ -9,7 +9,6 @@ import 'gitalk/dist/gitalk.css';
 
 import { parseChineseDate } from '../api';
 
-import ExternalLink from '../components/ExternalLink';
 import Sidebar from '../components/Sidebar';
 import Content from '../components/Content';
 import SEO from '../components/SEO';
@@ -23,13 +22,13 @@ import { config } from '../../data';
 // Styles
 import './blog-post.scss';
 
-const { name, iconUrl, gitalk } = config;
+const { name } = config;
 
-const bgWhite = { padding: '10px 30px', background: 'white' };
+// const bgWhite = { padding: '10px 30px', background: 'black' };
 
 // Prevent webpack window problem
-const isBrowser = typeof window !== 'undefined';
-const Gitalk = isBrowser ? require('gitalk') : undefined;
+// const isBrowser = typeof window !== 'undefined';
+// const Gitalk = isBrowser ? require('gitalk') : undefined;
 
 class BlogPost extends Component {
   constructor(props) {
@@ -37,17 +36,17 @@ class BlogPost extends Component {
     this.data = this.props.data;
   }
 
-  componentDidMount() {
-    const { frontmatter, id: graphqlId } = this.data.content.edges[0].node;
-    const { title, id } = frontmatter;
+  // componentDidMount() {
+  //   const { frontmatter } = this.data.content.edges[0].node;
+  //   const { title, id } = frontmatter;
 
-    const GitTalkInstance = new Gitalk({
-      ...gitalk,
-      title,
-      id: id || graphqlId,
-    });
-    GitTalkInstance.render('gitalk-container');
-  }
+  // const GitTalkInstance = new Gitalk({
+  //   ...gitalk,
+  //   title,
+  //   id: id || graphqlId,
+  // });
+  // GitTalkInstance.render('gitalk-container');
+  // }
 
   render() {
     const { node } = this.data.content.edges[0];
@@ -63,28 +62,16 @@ class BlogPost extends Component {
     return (
       <div className="row post order-2">
         <Header
-          img={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
+          img={headerImage || 'https://i.imgur.com/iESFmY7.jpg?1'}
           title={title}
           authorName={name}
-          authorImage={iconUrl}
+          authorImage="https://i.imgur.com/hmtWBGW.jpg?1"
           subTitle={parseChineseDate(date)}
         />
         <Sidebar />
         <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
           <Content post={html} />
-          <div className="m-message" style={bgWhite}>
-            如果你覺得我的文章對你有幫助的話，希望可以推薦和交流一下。歡迎
-            <ExternalLink
-              href="https://github.com/calpa/gatsby-starter-calpa-blog"
-              title="關注和 Star 本博客"
-            />
-            或者
-            <ExternalLink
-              href="https://github.com/calpa/"
-              title="關注我的 Github"
-            />
-            。
-          </div>
+
 
           <div id="gitalk-container" />
         </div>
@@ -94,10 +81,10 @@ class BlogPost extends Component {
         <SEO
           title={title}
           url={slug}
-          siteTitleAlt="Calpa's Blog"
+          siteTitleAlt="Lisa's Blog"
           isPost={false}
           description={excerpt}
-          image={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
+          image={headerImage || 'https://imgur.com/0lv88S7'}
         />
       </div>
     );

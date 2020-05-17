@@ -4,11 +4,11 @@
 // m = Medium Thumbnail (320×320)
 // l = Large Thumbnail (640×640)
 // h = Huge Thumbnail (1024×1024)
-const defaultPicture = 'M795H8A.jpg';
+const defaultPicture = 'https://i.imgur.com/GyvLN6D.jpg';
 
 const parseImgur = (rawImage, size = 'large') => {
   if (!rawImage) {
-    return `https://i.imgur.com/${defaultPicture}`;
+    return `${defaultPicture}`;
   }
 
   const mapping = {
@@ -27,7 +27,7 @@ const parseImgur = (rawImage, size = 'large') => {
     if (rawImage.match('http')) {
       return rawImage;
     }
-    return `https://i.imgur.com/${rawImage}`;
+    return `${defaultPicture}`;
   }
 
   const resizedImage = rawImage.replace(/(.*)\.(.*)/, `$1${mapping[size]}.$2`);
@@ -35,7 +35,7 @@ const parseImgur = (rawImage, size = 'large') => {
   if (resizedImage.match('http')) {
     return resizedImage;
   }
-  return `https://i.imgur.com/${resizedImage}`;
+  return `${defaultPicture}`;
 };
 
 const parseTitle = (title, text) => `title="${title || text}"`;

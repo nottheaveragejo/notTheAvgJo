@@ -1,8 +1,8 @@
 {
   "name": "blog",
-  "description": "Calpa's Blog",
+  "description": "Lisa's Blog",
   "version": "1.0.0",
-  "author": "Calpa Liu <calpaliu@gmail.com>",
+  "author": "Lisa Jo <lisaxjo@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-brands-svg-icons": "^5.3.1",
@@ -26,7 +26,7 @@
     "gatsby-plugin-netlify": "^2.0.13",
     "gatsby-plugin-nprogress": "^2.0.10",
     "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sentry": "^1.0.0",
     "gatsby-plugin-sitemap": "^2.0.10",
